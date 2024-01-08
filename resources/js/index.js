@@ -10,4 +10,30 @@ document.addEventListener('DOMContentLoaded', ()=> {
         navList.classList.toggle('nav-show');
         burger.classList.toggle('burger-active')
     })
+
+    // Get meals data
+    const url = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=American';
+    const featured = document.querySelector('#featured-cards');
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            const meals = data.meals;
+            let html = '';
+            meals.slice(0, 3).forEach(meal => {
+                html += `<div class="card">
+                            <img src="${meal.strMealThumb}" alt="meal-thumbnail" class="card-img">
+                            <h4 class="card-text">${meal.strMeal}</h4>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>`
+            })
+            featured.innerHTML = html;
+        })
+        .catch(err => console.log(err))
 })
