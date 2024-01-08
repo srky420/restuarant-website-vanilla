@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* html */
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: 200vh;
+}
+
+/* container */
+.container {
+    max-width: 1024px;
+    margin: auto;
+    position: relative;
+}
+
+/* navbar */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    gap: 4rem;
+}
+
+.logo {
+    margin-right: 1rem;
+    width: 6rem;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    transition: all 0.1s linear;
+}
+
+.nav-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.2s linear;
+    text-shadow: 0 0 3px black;
+}
+
+.nav-link:hover {
+    opacity: 0.9;
+}
+
+.nav-link::after {
+    display: block;
+    content: '';
+    width: 0%;
+    height: 0.2rem;
+    background-color: white;
+    transition: all 0.2s linear;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    border: 2px solid white;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.2s all linear;
+    text-shadow: 0 0 3px black;
+    box-shadow: 0 0 3px 0 black;
+}
+
+.nav-btn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    text-shadow: none;
+}
+
+/* burger */
+.burger {
+    padding: 0.5rem 0.7rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+    display: none;
+}
+
+.burger-active {
+    background-color: white;
+    color: black;
+}
+
+/* hero */
+.hero {
+    width: 100%;
+    height: 32rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 0 0 3px black;
+    letter-spacing: 0.1rem;
+    padding: 0 1rem;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    background-image: url('../assets/img/hero-img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    box-shadow: inset 0 0 0 50vw rgba(0, 0, 0, 0.5);
+    z-index: -99;
+}
+
+.eg {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+
+/* media queries */
+@media screen and (max-width: 1280px) {
+    .container {
+        width: 768px;
+    }
+    
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 640px;
+    }
+    
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    
+    html {
+        font-size: 14px;
+    }
+
+    .navbar {
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        width: 100%;
+    }
+    
+    html {
+        font-size: 12px;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 5rem;
+        right: 1rem;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 1rem;
+        border: 1px solid grey;
+        border-top-right-radius: 0;
+        text-align: center;
+        overflow: hidden;
+        height: 0px;
+        visibility: hidden;
+        gap: 0;
+    }
+
+    .nav-list li {
+        width: 100%;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 1rem 5rem;
+    }
+
+    .nav-link:hover::after {
+        width: 0;
+    }
+
+    .nav-show {
+        height: 15rem;
+        visibility: visible;
+    }
+
+    .burger {
+        display: inline-block;
+    }
+}
+
+/* @media screen and (max-width: 400px) {
+    .nav-btn {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.8rem;
+    }
+    .burger {
+        padding: 0.35rem 0.5rem;
+    }
+} */
