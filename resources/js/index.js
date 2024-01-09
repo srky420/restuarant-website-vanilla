@@ -21,17 +21,21 @@ document.addEventListener('DOMContentLoaded', ()=> {
             const meals = data.meals;
             let html = '';
             meals.slice(0, 3).forEach(meal => {
-                html += `<div class="card">
-                            <img src="${meal.strMealThumb}" alt="meal-thumbnail" class="card-img">
-                            <h4 class="card-text">${meal.strMeal}</h4>
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                html += (`<div class="card">
+                            <div class="card-img">
+                                <img src="${meal.strMealThumb}" alt="meal-thumbnail">
                             </div>
-                        </div>`
+                            <div class="card-text">
+                                <h4>${meal.strMeal}</h4>
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>`)
             })
             featured.innerHTML = html;
         })

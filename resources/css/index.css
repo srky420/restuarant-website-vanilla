@@ -3,7 +3,9 @@
 :root {
     --primary-color: #f9a912;
     --secondary-color: #ffffff;
-    ---bg-color: #ffffe7;
+    --dark: #000;
+    --light: #fff;
+    --grey: #ddd;
 }
 
 *,
@@ -145,7 +147,6 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     background-image: url('../assets/img/hero-img.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -157,15 +158,16 @@ body {
 
 /* featured */
 .featured {
-    height: 40rem;
-    background-color: var(---bg-color);
-    padding: 1rem;
-    text-align: center;
+    background-color: var(--dark);
+    padding: 2rem 1rem;
+    box-shadow: 0 0 6rem 8rem var(--dark);
+    color: var(--light);
 }
 
 .featured .header {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 1rem;
+    text-align: center;
 }
 
 .cards {
@@ -179,13 +181,100 @@ body {
 }
 
 .card-img {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card-img img {
     width: 100%;
-    border-radius: 50%;
+    border-radius: 1rem;
+    transition: all 0.5s ease-out;
+}
+
+.card-img:hover img {
+    transform: scale(1.1);
 }
 
 .card-text {
-    text-align: center;
+    margin: 0.5rem 0;
+}
+
+/* about section */
+.about-section {
+    padding: 2rem 0;
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.about-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-text {
+    padding: 0 0 0 1rem;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-shadow: 0 0 3px black;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+}
+
+.about-text p {
+    text-align: justify;
     margin: 1rem 0;
+    color: var(--grey);
+}
+
+.about-img {
+    width: 16.5rem;
+    height: 25rem;
+}
+
+.about-img img {
+    width: inherit;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.about-btns {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about-btn {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--light);
+    background-color: transparent;
+    border-radius: 2rem;
+    color: var(--light);
+    text-shadow: 0 0 3px black;
+    box-shadow: 0 0 3px black;
+}
+
+.shadow {
+    box-shadow: 0 0 5rem 5rem var(--dark);
+    height: 5rem;
+    background-color: var(--dark);
+}
+
+/* acheivements section */
+.achievements-section {
+    height: 20rem;
+    text-align: center;
+}
+
+.achievements-section h2 {
+    font-size: 2.5rem;
+    color: var(--light);
 }
 
 /* media queries */
@@ -220,6 +309,14 @@ body {
 
     .navbar {
         padding: 0 1rem;
+    }
+    
+    .about-section {
+        padding: 2rem 1rem;
+    }
+
+    .nav-btn {
+        padding: 0.5rem 0.8rem;
     }
 }
 
@@ -273,4 +370,25 @@ body {
     .burger {
         display: inline-block;
     }
+
+    .about-section {
+        padding: 2rem 0;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .about-img {
+        /* position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0; */
+        display: none;
+    }
+
+    .about-img img {
+        border-radius: 0;
+    }
+
 }
+ 
