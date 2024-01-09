@@ -40,4 +40,18 @@ document.addEventListener('DOMContentLoaded', ()=> {
             featured.innerHTML = html;
         })
         .catch(err => console.log(err))
+
+        // Achievements scroll view
+        const achievementSec = document.querySelector('#achievement-section')
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+
+            }
+        }, {
+            root: null,
+            threshold: 0.5
+        })
+
+        observer.observe(achievementSec);
 })
+

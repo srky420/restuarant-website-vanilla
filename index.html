@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./resources/css/index.css" />
+    <link rel="stylesheet" href="./resources/scss/index.css" />
     <title>Restuarant</title>
   </head>
 
@@ -44,14 +44,14 @@
     <!-- Featured -->
     <section class="featured">
       <div class="container">
-        <h2 class="header">Popular <span class="text-primary">Dishes</span></h2>
+        <h2>Popular <span class="text-primary">Dishes</span></h2>
         <div class="cards" id="featured-cards">
 
         </div>
       </div>
     </section>
 
-    <!-- About -->
+    <!-- About section -->
     <section class="about-section">
       <div class="container">
         <div class="about-inner">
@@ -60,16 +60,16 @@
           </div>
           <div class="about-text">
             <div>
-              <h4>About our kitchen</h4>
+              <h4>About Our <span class="text-primary">Kitchen</span></h4>
               <h2>Embark on a Gastronomic Journey</h2>
               <p>At BITES, our kitchen is the heart and soul of our culinary narrative. Immerse yourself in a world where passion meets precision, and each dish is a testament to our unwavering commitment to exceptional taste and quality.</p>
               <p>We take pride in sourcing the finest, locally-sourced ingredients, ensuring that each plate is a celebration of freshness and sustainability. Our culinary artisans craft dishes that tantalize taste buds and evoke a symphony of flavors, leaving an indelible mark on your palate.</p>
             </div>
             <div class="about-btns">
-              <button class="about-btn">Online Order</button>
-              <button class="about-btn">Pre-Booking</button>
-              <button class="about-btn">24/7 Service</button>
-              <button class="about-btn">Hygienic Place</button>
+              <button class="about-btn"><i class="fa-solid fa-globe"></i> Online Order</button>
+              <button class="about-btn"><i class="fa-solid fa-utensils"></i> Pre-Booking</button>
+              <button class="about-btn"><i class="fa-solid fa-clock-rotate-left"></i> 24/7 Service</button>
+              <button class="about-btn"><i class="fa-solid fa-hand-sparkles"></i> Hygienic Place</button>
             </div>
           </div>
         </div>
@@ -78,14 +78,78 @@
 
     <div class="shadow"></div>
 
-    <section class="achievements-section">
+    <!-- Achievements section -->
+    <section class="achievements-section" id="achievement-section">
       <div class="container">
         <h2>Our <span class="text-primary">Achievements</span></h2>
+        <div class="achievements">
+          <div class="achievement">
+            <h3>60k+</h3>
+            <p>Happy Foodies</p>
+          </div>
+          <div class="achievement">
+            <h3>5</h3>
+            <p>Awards</p>
+          </div>
+          <div class="achievement">
+            <h3>4</h3>
+            <p>Branches</p>
+          </div>
+          <div class="achievement">
+            <h3>10+</h3>
+            <p>Menu Items</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <div class="shadow"></div>
 
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <div class="container">
+        <hr>
+        <div class="newsletter-inner">
+          <div class="newsletter-text">
+            <h2>Subsribe to our <span class="text-primary">newsletter</span></h2>
+            <p>Get information about new offers and menu items.</p>
+          </div>
+          <form class="newsletter-form">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="text" placeholder="Enter your email...">
+            <button>Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <hr>
+        <div class="footer-inner">
+          <div class="footer-text">
+            <h4>BITES</h4>
+            <p>Welcome to BITES, where the kitchen is not just a place of creation; it's the heart of our culinary identity.</p>
+          </div>
+          <div class="footer-info">
+            <div>
+              <h4>Located</h4>
+              <p><i class="fa-solid fa-location-dot"></i> 123 Epicurean Lane Gourmet City, Culinaryville 56789</p>
+            </div>
+            <div>
+              <h4>Contact</h4>
+              <p><i class="fa-solid fa-envelope"></i> BITES@site.com</p>
+              <p><i class="fa-solid fa-phone"></i> +123-456-789</p>
+            </div>
+          </div>
+        </div>
+        <div class="socials">
+          <i class="fa-brands fa-facebook"></i>
+        </div>
+      </div>
+    </div>
+  
     <script src="./resources/js/index.js"></script>
   </body>
 </html>

@@ -1,0 +1,123 @@
+@media screen and (max-width: 1280px) {
+    .container {
+        width: 768px;
+    }
+    
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 640px;
+    }
+    
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    
+    html {
+        font-size: 14px;
+    }
+
+    .navbar {
+        padding: 0 1rem;
+    }
+
+    .nav-btn {
+        padding: 0.5rem 0.8rem;
+    }
+    
+    .about-section {
+        padding: 2rem 1rem;
+    }
+
+    .achievements-section {
+        padding: 0 1rem;
+    }
+    
+    .newsletter {
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        width: 100%;
+    }
+    
+    html {
+        font-size: 12px;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 5rem;
+        right: 1rem;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 1rem;
+        border: 1px solid grey;
+        border-top-right-radius: 0;
+        text-align: center;
+        overflow: hidden;
+        height: 0px;
+        visibility: hidden;
+        gap: 0;
+
+        li {
+            width: 100%;
+        } 
+    }
+
+    .nav-link {
+        display: block;
+        padding: 1rem 5rem;
+    }
+
+    .nav-link:hover::after {
+        width: 0;
+    }   
+
+    .nav-show {
+        height: 15rem;
+        visibility: visible;
+    }
+
+    .burger {
+        display: inline-block;
+    }
+
+    .about-img {
+        display: none;
+    }
+
+    .about-text {
+        padding: 0;
+    }
+
+    .newsletter-inner {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .newsletter-form {
+        input {
+            width: 20rem;
+            font-size: 0.9rem;
+        }
+    }
+}
