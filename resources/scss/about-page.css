@@ -284,81 +284,14 @@ hr {
   color: #000;
 }
 
-/* Menu section */
-.menu-section {
+/* about us section */
+.about-us-section {
+  height: 36rem;
   background-color: #000;
-  padding: 2rem 0 4rem 0;
-  box-shadow: 0 0 6rem 8rem #000;
 }
 
-.menu-inner h2 {
-  font-size: 2.5rem;
-  color: #fff;
-  text-align: center;
-  margin: 1rem 0;
-}
-
-.menu-items {
-  padding: 2rem 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  row-gap: 2rem;
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
-}
-
-.menu-item img {
-  width: 100%;
-  border-radius: 1rem;
-}
-
-.menu-item-text {
-  color: #fff;
-}
-.menu-item-text p {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menu-item-text i {
-  color: #f9a912;
-  font-size: 0.9rem;
-}
-
-.pagination {
-  padding: 1rem 0;
-  justify-content: end;
-  display: flex;
-  gap: 0.5rem;
-}
-.pagination a {
-  color: #fff;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  font-size: 0.9rem;
-}
-.pagination a:hover {
-  background-color: #fff;
-  color: #000;
-  cursor: pointer;
-}
-.pagination .active {
-  color: #000;
-  border-color: #f9a912;
-  background-color: #f9a912;
-}
-.pagination .active:hover {
-  background-color: #f9a912;
-  color: #000;
-  cursor: not-allowed;
+.footer {
+  background-color: #000 !important;
 }
 
 @media screen and (max-width: 1280px) {
@@ -482,4 +415,4 @@ hr {
   .menu-items {
     grid-template-columns: repeat(3, 1fr);
   }
-}/*# sourceMappingURL=menu-page.css.map */
+}/*# sourceMappingURL=about-page.css.map */

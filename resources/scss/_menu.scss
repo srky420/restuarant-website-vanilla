@@ -71,15 +71,18 @@
     a:hover {
         background-color: $light;
         color: $dark;
+        cursor: pointer;
     }
 
     .active {
-        color: $primary-color;
+        color: $dark;
         border-color: $primary-color;
+        background-color: $primary-color;
     }
 
     .active:hover {
-        background-color: transparent;
-        color: $primary-color;
+        background-color: $primary-color;
+        color: $dark;
+        cursor: not-allowed;
     }
 }
