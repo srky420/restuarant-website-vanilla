@@ -34,6 +34,10 @@
     .nav-btn {
         padding: 0.5rem 0.8rem;
     }
+
+    .featured {
+        padding: 3rem 1rem;
+    }
     
     .about-section {
         padding: 2rem 1rem;
@@ -44,6 +48,14 @@
     }
     
     .newsletter {
+        padding: 0 1rem;
+    }
+
+    .footer {
+        padding: 0 1rem;
+    }
+
+    .menu-inner {
         padding: 0 1rem;
     }
 }
@@ -119,5 +131,24 @@
             width: 20rem;
             font-size: 0.9rem;
         }
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .socials {
+        justify-content: center;
+    }
+
+    .howitworks-inner {
+        padding: 0 1rem;
+    }
+
+    .menu-items {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
