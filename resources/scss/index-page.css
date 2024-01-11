@@ -263,7 +263,7 @@ hr {
 }
 
 .socials {
-  padding: 2rem 0;
+  padding: 2rem 0 1rem 0;
   display: flex;
   gap: 1rem;
 }
@@ -282,6 +282,13 @@ hr {
 .socials a:hover {
   background-color: #fff;
   color: #000;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #ddd;
+  padding-bottom: 1rem;
+  text-align: center;
 }
 
 /* about section */

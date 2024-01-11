@@ -277,7 +277,7 @@ hr {
 }
 
 .socials {
-    padding: 2rem 0;
+    padding: 2rem 0 1rem 0;
     display: flex;
     gap: 1rem;
 
@@ -298,5 +298,12 @@ hr {
         background-color: $light;
         color: $dark;
     }
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: $grey;
+    padding-bottom: 1rem;
+    text-align: center;
 }
 
