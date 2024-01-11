@@ -1,9 +1,13 @@
 @import "globals";
 
+.hero {
+    height: 20rem !important;
+}
+
 /* Menu section */
 .menu-section {
     background-color: $dark;
-    padding: 2rem 0 4rem 0;
+    padding: 0 0 4rem 0;
     box-shadow: 0 0 6rem 8rem $dark;
 }
 

@@ -58,6 +58,14 @@
     .menu-inner {
         padding: 0 1rem;
     }
+
+    .about-us-inner {
+        padding: 0 1rem;
+    }
+
+    .contact-section-inner {
+        padding: 0 1rem;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -150,5 +158,44 @@
 
     .menu-items {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-us-item {
+        gap: 1rem;
+    }
+
+    .about-us-text {
+        grid-column: span 7;
+    }
+
+    .about-us-img {
+        grid-column: span 5;
+    }
+
+    .contact-form {
+        input, textarea {
+            font-size: 0.9rem;
+            padding: 0.7rem 1rem;
+        }
+    }
+
+    .contact-info {
+        p {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-us-img {
+        img {
+            aspect-ratio: 4 / 6;
+        }
+    }
+
+    .about-us-text {
+        p {
+            font-size: 0.9rem;
+        }
     }
 }

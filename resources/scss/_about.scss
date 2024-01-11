@@ -1,13 +1,56 @@
 @import "globals";
 
+.hero {
+    height: 20rem !important;
+}
+
 /* about us section */
 .about-us-section {
-    height: 36rem;
+    padding: 2rem 0;
+    background-color: $dark;
+    box-shadow: 0 0 6rem 8rem $dark;
+}
+
+.about-us-inner {
+    color: $light;
+    min-height: 36rem;
+
+    p {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+.about-us-item {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    margin: 4rem 0;
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 2rem;
+        aspect-ratio: 4 / 4;
+        object-fit: cover;
+    }
+}
+
+.about-us-text {
+    grid-column: span 7;
     background-color: $dark;
 }
 
-
-
-.footer {
-    background-color: $dark !important;
+.about-us-img {
+    grid-column: span 5;
 }
