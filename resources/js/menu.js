@@ -49,7 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 });
             });
-        });
+        })
+        .catch(err => console.log(err));
 });
 
 // Create pagination pages
@@ -77,7 +78,7 @@ function showPage(list, lower, upper) {
                         <img src="${item.strMealThumb}" alt="dish-thumbnail">
                     </div>
                     <div class="menu-item-text">
-                        <p>${item.strMeal}</p>
+                        <p class="dish-title">${item.strMeal}<span class="tooltip">${item.strMeal}</span></p>
                         <small class="text-primary">${item.price}</small>
                     </div>
                 </div>`)

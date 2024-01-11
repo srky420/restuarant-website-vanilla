@@ -295,10 +295,10 @@ hr {
 .about-inner {
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .about-text {
-  padding: 0 0 0 1rem;
   font-size: 0.9rem;
   display: flex;
   flex-direction: column;
@@ -339,8 +339,6 @@ hr {
   background-color: transparent;
   border-radius: 2rem;
   color: #fff;
-  text-shadow: 0 0 3px black;
-  box-shadow: 0 0 3px black;
 }
 .about-btn * {
   margin: 0 0.5rem;
@@ -413,10 +411,9 @@ hr {
   padding: 1rem;
   border: 0.25rem solid #fff;
   border-radius: 3rem;
-  background-color: transparent;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   text-align: center;
-  text-shadow: 0 0 3px black;
   box-shadow: 0 0 3px black;
 }
 .achievement h3 {
@@ -567,9 +564,6 @@ hr {
   }
   .about-img {
     display: none;
-  }
-  .about-text {
-    padding: 0;
   }
   .newsletter-inner {
     flex-direction: column;

@@ -11,10 +11,10 @@
 .about-inner {
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
 }
     
 .about-text {
-    padding: 0 0 0 1rem;
     font-size: 0.9rem;
     display: flex;
     flex-direction: column;
@@ -57,8 +57,6 @@
     background-color: transparent;
     border-radius: 2rem;
     color: $light;
-    text-shadow: 0 0 3px black;
-    box-shadow: 0 0 3px black;
 
     * {
         margin: 0 0.5rem;
@@ -136,10 +134,9 @@
     padding: 1rem;
     border: 0.25rem solid $light;
     border-radius: 3rem;
-    background-color: transparent;
-    color: $light;
+    background-color: $light;
+    color: $dark;
     text-align: center;
-    text-shadow: $text-shadow;
     box-shadow: $text-shadow;
 
     h3 {

@@ -1,3 +1,5 @@
+let animate = true;
+
 document.addEventListener('DOMContentLoaded', () => {
     // Get meals data
     const url = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=American';
@@ -30,10 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(err => console.log(err))
 
         // Achievements scroll view
-        const achievementSec = document.querySelector('#achievement-section')
+        const achievementSec = document.querySelector('#achievements-section')
         const observer = new IntersectionObserver(([entry]) => {
             if (entry.isIntersecting) {
-
+                if (animate) counterAnimation();           
             }
         }, {
             root: null,
@@ -42,4 +44,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         observer.observe(achievementSec);
 })
+
+function counterAnimation() {
+    const counters = document.querySelectorAll('.counter');
+
+    counters.forEach(counter => {
+
+        const value = parseInt(counter.dataset.value);
+        const info = counter.dataset.info;
+        let c = 0;
+
+        counter.innerHTML = c + info;
+
+        const updateCounter = () => {
+            let c = parseInt(counter.innerHTML);
+            let increment = value / 200;
+
+            if (c < value) {
+                counter.innerHTML = `${Math.ceil(c + increment)}${info}`;
+                setTimeout(updateCounter, 20);
+            }
+            else {
+                counter.innerHTML = value + info;
+            }
+
+        }
+        setTimeout(updateCounter(), 1000);
+    });
+    animate = false;
+}
 

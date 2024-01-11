@@ -16,7 +16,7 @@
         font-size: 2.5rem;
         color: $light;
         text-align: center;
-        margin: 1rem 0;
+        margin-bottom: 1rem;
     }
 }
 
@@ -29,6 +29,7 @@
 }
 
 .menu-item {
+    position: relative;
 
     img {
         width: 100%;
@@ -55,7 +56,7 @@
 
 .pagination {
     padding: 1rem 0;
-    justify-content: end;
+    justify-content: flex-end;
     display: flex;
     gap: 0.5rem;
 
@@ -89,4 +90,24 @@
         color: $dark;
         cursor: not-allowed;
     }
+}
+
+.tooltip {
+    position: absolute;
+    border-radius: 1rem 1rem 0 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+    color: $light;
+    background-color: $dark;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 0.9rem;
+    transition: opacity 0.2s linear;
+}
+
+.menu-item:hover .tooltip {
+    opacity: 0.8;
+    visibility: visible;
 }
