@@ -14,8 +14,6 @@ This is a website made in HTML, CSS, SASS and JS for a made-up restuarant busine
 
 ## Support
 
-Thank you for going through this extensive documentation. I hope it helps! Please provide me with feedback for any changes or improvements.
-
 For any questions or feedback:
 
 [LinkedIn](https://www.linkedin.com/in/shahrukh-khan-2b8968242/)
