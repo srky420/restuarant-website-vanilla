@@ -336,10 +336,6 @@ hr {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu-item-text i {
-  color: #f9a912;
-  font-size: 0.9rem;
-}
 
 .pagination {
   padding: 1rem 0;
