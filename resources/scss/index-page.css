@@ -291,6 +291,35 @@ hr {
   text-align: center;
 }
 
+.goto-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  display: none;
+}
+.goto-top button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  font-size: 0.9rem;
+}
+.goto-top button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+}
+
+.show-btn {
+  display: block;
+  z-index: 10;
+}
+
 /* about section */
 .about-section {
   padding: 4rem 0;
@@ -488,6 +517,10 @@ hr {
   html {
     font-size: 14px;
   }
+  .goto-top {
+    right: 1rem;
+    bottom: 1rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .container {
@@ -525,6 +558,11 @@ hr {
   }
   .contact-section-inner {
     padding: 0 1rem;
+  }
+  .goto-top button {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 1rem 0 #000;
   }
 }
 @media screen and (max-width: 640px) {

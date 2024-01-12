@@ -16,6 +16,11 @@
     html {
         font-size: 14px;
     }
+
+    .goto-top {
+        right: 1rem;
+        bottom: 1rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -65,6 +70,14 @@
 
     .contact-section-inner {
         padding: 0 1rem;
+    }
+
+    .goto-top {
+        button {
+            background-color: $light;
+            color: $dark;
+            box-shadow: 0 0 1rem 0 $dark;
+        }
     }
 }
 

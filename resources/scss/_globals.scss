@@ -307,3 +307,34 @@ hr {
     text-align: center;
 }
 
+.goto-top {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    display: none;
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        color: $light;
+        background-color: transparent;
+        border: 1px solid $light;
+        border-radius: 50%;
+        font-size: 0.9rem;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: $light;
+        color: $dark;
+    }
+}
+
+.show-btn {
+    display: block;
+    z-index: 10;
+}
+
