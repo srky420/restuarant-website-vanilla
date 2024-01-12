@@ -1,14 +1,13 @@
 let animate = true;
 
-document.addEventListener('DOMContentLoaded', () => {
+$(document).ready(() => {
     // Get meals data
     const url = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=American';
-    const featured = document.querySelector('#featured-dishes');
-    fetch(url)
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            const meals = data.meals;
+
+    $.get(url, (responseTxt, statusTxt, xhr) => {
+        if (statusTxt === 'success') {
+            const meals = responseTxt.meals;
+            console.log(meals)
             let html = '';
             meals.slice(0, 3).forEach(meal => {
                 html += (`<div class="dish">
@@ -26,50 +25,46 @@ document.addEventListener('DOMContentLoaded', () => {
                                 </div>
                             </div>
                         </div>`)
-            })
-            featured.innerHTML = html;
-        })
-        .catch(err => console.log(err))
+            });
+            $('#featured-dishes').html(html);
+        }
+    })
 
-        // Achievements scroll view
-        const achievementSec = document.querySelector('#achievements-section')
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                if (animate) counterAnimation();           
-            }
-        }, {
-            root: null,
-            threshold: 0.5
-        })
+    // Achievements scroll view
+    const observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+            if (animate) counterAnimation();           
+        }
+    }, {
+        root: null,
+        threshold: 0.5
+    })
 
-        observer.observe(achievementSec);
+    observer.observe($('#achievements-section')[0]);
 })
 
 function counterAnimation() {
-    const counters = document.querySelectorAll('.counter');
+    $('.counter').each((i, el) => {
 
-    counters.forEach(counter => {
-
-        const value = parseInt(counter.dataset.value);
-        const info = counter.dataset.info;
+        const value = parseInt($(el).data('value'));
+        const info = $(el).data('info');
         let c = 0;
 
-        counter.innerHTML = c + info;
+        $(el).html(c + info)
 
         const updateCounter = () => {
-            let c = parseInt(counter.innerHTML);
             let increment = value / 200;
 
             if (c < value) {
-                counter.innerHTML = `${Math.ceil(c + increment)}${info}`;
-                setTimeout(updateCounter, 20);
+                c += increment;
+                $(el).html(`${Math.ceil(c)}${info}`);
+                setTimeout(updateCounter, 10);
             }
             else {
-                counter.innerHTML = value + info;
+                $(el).html(value + info);
             }
-
         }
-        setTimeout(updateCounter(), 1000);
+        updateCounter();
     });
     animate = false;
 }

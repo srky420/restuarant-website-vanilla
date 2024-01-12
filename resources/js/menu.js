@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Get menu items
     const url = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=American';
-    const menuItems = document.querySelector('#menu-items');
 
-    fetch(url)
-        .then(res => res.json())
-        .then(data => {
-            let meals = data.meals;
+    // Get data
+    $.get(url, (responseTxt, statusTxt, xhr) => {
+        if (statusTxt === 'success') {
+            let meals = responseTxt.meals;
 
             // Add random price b/w 5 - 15 to each meal
             meals = meals.map(meal => ({
@@ -18,39 +17,23 @@ document.addEventListener('DOMContentLoaded', () => {
             let currentPage = 1;
             let pageSize = 12;
 
-            // Show current page
-            menuItems.innerHTML = showPage(meals, currentPage - 1, pageSize);
+            $('#menu-items').html(showPage(meals, currentPage - 1, pageSize));
+            $('.pagination').html(createPagination(paginate(meals.length, pageSize)));
+            $('.pagination a').each((i, el) => {
+                $(el).click((e) => {
+                    // Check if already active page
+                    if ($(el).hasClass('active')) return;
 
-            // Create pagination links
-            const pagination = document.querySelector('.pagination');
-            pagination.innerHTML = createPagination(paginate(meals.length, pageSize));
+                    // Otherwise change page
+                    const page = parseInt($(el).data('page'));
 
-            // Add click event to pagination links
-            const pageLinks = pagination.querySelectorAll('a');
-            pageLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    if (e.currentTarget.classList.contains('active')) {
-                        return;
-                    }
-                    // Show clicked page
-                    const page = parseInt(e.currentTarget.dataset.page);
-                    menuItems.innerHTML = showPage(meals, (page - 1) * pageSize, pageSize * page);
-                    
-                    // Add .active to clicked link
-                    pageLinks.forEach(_link => {
-                        if (_link === link) {
-                            _link.classList.add('active');
-                            link.disabled = true;
-                        }
-                        else {
-                            _link.classList.remove('active');
-                            _link.disabled = false;
-                        }
-                    });
+                    $('#menu-items').html(showPage(meals, (page - 1) * pageSize, page * pageSize));
+
+                    $('.pagination a').each((i, _el) => _el === el ? $(_el).addClass('active') : $(_el).removeClass('active'))
                 });
             });
-        })
-        .catch(err => console.log(err));
+        }
+    });
 });
 
 // Create pagination pages
