@@ -2,6 +2,7 @@ $('document').ready(() => {
     // Nav collapse/show
     $('.burger').click((e) => {
         $('.nav-list').toggleClass('nav-show');
+        $('.burger').toggleClass('burger-active');
     })
 
     // Goto top
