@@ -20,6 +20,7 @@
 /* html */
 html {
   font-size: 18px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -285,7 +286,7 @@ hr {
 }
 
 .copyright {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #ddd;
   padding-bottom: 1rem;
   text-align: center;
@@ -482,6 +483,12 @@ hr {
     color: #000;
     box-shadow: 0 0 1rem 0 #000;
   }
+  .app-links-inner {
+    padding: 1rem;
+  }
+  .app-links-img {
+    right: 1rem;
+  }
 }
 @media screen and (max-width: 640px) {
   .container {
@@ -569,6 +576,12 @@ hr {
   .contact-info p {
     font-size: 0.9rem;
   }
+  .app-links-img {
+    width: 15rem;
+  }
+  .app-links-section {
+    padding-bottom: 5rem;
+  }
 }
 @media screen and (max-width: 480px) {
   .about-us-img img {
@@ -576,5 +589,11 @@ hr {
   }
   .about-us-text p {
     font-size: 0.9rem;
+  }
+  .app-links-inner {
+    justify-content: center;
+  }
+  .app-links-img {
+    display: none;
   }
 }/*# sourceMappingURL=menu-page.css.map */

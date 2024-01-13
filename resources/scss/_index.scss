@@ -152,7 +152,6 @@
 .howitworks-section {
     background-color: $dark;
     padding: 2rem 0 10rem 0;
-    box-shadow: 0 0 6rem 8rem $dark;
 
     h2 {
         font-size: 3rem;
@@ -192,5 +191,56 @@
             color: $light;
             text-decoration: none;
         }
+    }
+}
+
+/* Store links */
+.app-links-section {
+    background-color: $dark;
+    padding: 2rem 0 10rem 0;
+    overflow: hidden;
+    box-shadow: 0 0 6rem 8rem $dark;
+}
+
+.app-links-inner {
+    display: flex;
+    color: $light;
+}
+
+.app-links-text {
+
+    p {
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+
+        li a {
+            display: block;
+            width: 10rem;
+    
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.app-links-img {
+    width: 18rem;
+    position: absolute;
+    right: 0;
+    top: -2rem;
+
+    img {
+        width: 100%;
     }
 }

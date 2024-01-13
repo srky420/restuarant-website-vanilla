@@ -19,6 +19,7 @@
 /* html */
 html {
     font-size: 18px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -301,7 +302,7 @@ hr {
 }
 
 .copyright {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: $grey;
     padding-bottom: 1rem;
     text-align: center;

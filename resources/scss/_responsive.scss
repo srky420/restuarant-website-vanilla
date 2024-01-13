@@ -79,6 +79,14 @@
             box-shadow: 0 0 1rem 0 $dark;
         }
     }
+
+    .app-links-inner {
+        padding: 1rem;
+    }
+
+    .app-links-img {
+        right: 1rem;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -193,6 +201,14 @@
             font-size: 0.9rem;
         }
     }
+
+    .app-links-img {
+        width: 15rem;
+    }
+
+    .app-links-section {
+        padding-bottom: 5rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -206,5 +222,13 @@
         p {
             font-size: 0.9rem;
         }
+    }
+
+    .app-links-inner {
+        justify-content: center;
+    }
+
+    .app-links-img {
+        display: none;
     }
 }
