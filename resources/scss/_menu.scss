@@ -32,8 +32,11 @@
     position: relative;
 
     img {
+        display: block;
         width: 100%;
+        min-height: 200px;
         border-radius: 1rem;
+        margin-bottom: 0.5rem;
     }
 }
 

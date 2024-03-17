@@ -6,6 +6,12 @@
     html {
         font-size: 16px;
     }
+
+    .menu-item {    
+        img {
+            min-height: 150px;
+        }
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -208,6 +214,12 @@
 
     .app-links-section {
         padding-bottom: 5rem;
+    }
+
+    .menu-item {    
+        img {
+            min-height: 100px;
+        }
     }
 }
 
